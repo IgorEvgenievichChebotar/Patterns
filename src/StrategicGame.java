@@ -11,12 +11,12 @@ class PlayerBuilder {
     public PlayerType type;
 
     public PlayerBuilder withHealth(int health) {
-        this.health = health;
+        this.health = Math.max(health, 0);
         return this;
     }
 
     public PlayerBuilder withDamage(int damage) {
-        this.damage = damage;
+        this.damage = Math.max(damage, 0);;
         return this;
     }
 
